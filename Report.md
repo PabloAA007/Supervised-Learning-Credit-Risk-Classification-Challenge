@@ -4,13 +4,13 @@
 
 This analysis's goal was to evaluate credit risk using machine learning methods. Owing to the vast majority of risk-free loans compared to healthy loans, credit risk is fundamentally an imbalanced classification problem. Developing a model that determines the creditworthiness of borrowers using past lending data from a lending services provider.
 
-Whether a loan is high risk or low risk indicating by the target variable "loan_status." The imbalance in the dataset highlighting by the initial analysis of the target variable using the 'value_counts' function, which showed that there were much more low-risk loans than high-risk loans.
+Whether a loan is a high risk or low risk is indicated by the target variable "loan_status." The imbalance in the dataset highlighting by the initial analysis of the target variable using the `value_counts` function, which showed that there were many more low-risk loans than high-risk loans.
 
-There were several steps in the machine learning process:
+There were several steps in the machine-learning process:
 
 1. **Data Split**: We first divide the data into features (represented by "X") and the intended variable (represented by "y"). 
 2. **Train-Test Split**: We then divided these into datasets for training and testing. 
-3. **Model Training and Evaluation (Original Data)**: Using the original data, we trained a Logistic Regression model and assessed its performance using a number of measures, such as accuracy, precision, recall, and F1 score.
+3. **Model Training and Evaluation (Original Data)**: Using the original data, we trained a Logistic Regression model and assessed its performance using several measures, such as accuracy, precision, recall, and F1 score.
 4. **Resampling**: To resolve the class imbalance in the dataset, we subsequently used the 'RandomOverSampler' module from the imbalanced-learn toolkit. 
 5. **Model Training and Evaluation (Resampled Data)**: Using this oversampled data, we trained a new Logistic Regression model and assessed its performance.
 
@@ -39,7 +39,7 @@ There were several steps in the machine learning process:
 
 ## Summary
 
-Overall, the second model proved superior to the first by using oversampled data. This issue was most apparent in the better recall for high-risk loans, and the higher F1 score for high-risk loans. Identifying the risky loans is critical in credit risk analysis, as not recognizing a high-risk loan could lead to serious financial consequences.
+Overall, the second model proved superior to the first by using oversampled data. This issue was most apparent in the better recall for high-risk loans, and the higher F1 score for high-risk loans. Identifying risky loans is critical in credit risk analysis, as not recognizing a high-risk loan could lead to serious financial consequences.
 
 For high-risk loans, the second model showed a small drop in precision, indicating that there might be an exchange between precision and recall. It may be necessary to strike a balance between minimizing false negatives and false positives based on the bank's requirements.
 
